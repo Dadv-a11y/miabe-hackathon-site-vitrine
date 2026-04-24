@@ -198,6 +198,29 @@
       .partners-wrap .p-logos { gap: 24px; flex-wrap: wrap; }
       .contact-form { padding: 24px; }
       .form-row { grid-template-columns: 1fr; }
+
+      /* Mobile: center impact content and stack odd cards vertically */
+      .impact-inner { justify-items: center; text-align: center; }
+      .odd-row { flex-direction: column; align-items: center; }
+      .odd-card { max-width: 360px; width: 100%; }
+
+      /* Mobile: reduce ledger size and typography */
+      .ledger { max-width: 520px; margin: 0 auto; }
+      .ledger-hd { padding: 10px 14px; }
+      .ledger-hd .ltitle { font-size: 13px; }
+      .ledger-hd .lstatus { font-size: 10px; }
+      .ledger-row { padding: 10px 14px; gap: 10px; }
+      .ledger-icon { width: 30px; height: 30px; font-size: 14px; }
+      .ledger-name { font-size: 12px; }
+      .ledger-meta { font-size: 10px; }
+      .ledger-amount { font-size: 12px; }
+      .ledger-time { font-size: 10px; }
+
+      /* Mobile: center app section content */
+      .app-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 28px; }
+      .app-content { align-self: center; }
+      .store-buttons { justify-content: center; }
+      .app-media { display: block; }
     }
 
     /* Mobile hamburger styles */

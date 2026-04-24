@@ -17,25 +17,25 @@
       --r-xl: 28px;
     }
 
-    body { font-family: 'Manrope', sans-serif; background: var(--bg); color: var(--text-primary); line-height: 1.65; }
-    h1,h2,h3,h4 { font-family: 'Syne', sans-serif; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-primary); line-height: 1.65; }
+    h1,h2,h3,h4 { font-family: 'Manrope', sans-serif; }
     a { text-decoration: none; color: inherit; }
 
     /* NAV */
     nav { position: sticky; top: 0; z-index: 100; background: var(--bg); border-bottom: 1px solid var(--border); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; max-width: 1280px; margin: 0 auto; padding: 0 64px; }
-    .logo { display: flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 17px; color: var(--dark-green); cursor: pointer; }
+    .logo { display: flex; align-items: center; gap: 8px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 17px; color: var(--dark-green); cursor: pointer; }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-primary); opacity: .65; transition: opacity .2s; }
     .nav-links a:hover { opacity: 1; }
     .nav-links a.active { opacity: 1; border-bottom: 2px solid var(--dark-green); padding-bottom: 2px; }
-    .btn-cta-nav { background: var(--dark-green); color: var(--white); border: none; border-radius: 100px; padding: 10px 22px; font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; transition: opacity .2s; }
+    .btn-cta-nav { background: var(--dark-green); color: var(--white); border: none; border-radius: 100px; padding: 10px 22px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; transition: opacity .2s; }
     .btn-cta-nav:hover { opacity: .85; }
 
     .wrap { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
 
     /* BUTTONS */
-    .btn { display: inline-flex; align-items: center; gap: 6px; border-radius: 100px; padding: 13px 26px; font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; border: none; transition: all .2s; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; border-radius: 100px; padding: 13px 26px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; border: none; transition: all .2s; }
     .btn-dark { background: var(--dark-green); color: var(--white); }
     .btn-dark:hover { opacity: .88; }
     .btn-outline-dark { background: transparent; color: var(--dark-green); border: 1.5px solid rgba(21,43,25,.35); }
@@ -84,7 +84,7 @@
     .avatar-label { margin-left: 12px; font-size: 13px; font-weight: 600; color: var(--text-muted); }
 
     /* 12% cyan card */
-    .big-stat { font-family: 'Syne', sans-serif; font-size: 72px; font-weight: 800; color: var(--dark-green); line-height: 1; margin-bottom: 14px; margin-top: 20px; }
+    .big-stat { font-family: 'Manrope', sans-serif; font-size: 72px; font-weight: 800; color: var(--dark-green); line-height: 1; margin-bottom: 14px; margin-top: 20px; }
     .big-stat-label { font-size: 14px; color: var(--text-muted); line-height: 1.55; }
 
     /* Blockchain card */
@@ -165,6 +165,6 @@
     @media (max-width: 640px) {
       .nav-toggle { display: flex; }
       nav.nav-open .nav-links { display: flex; flex-direction: column; gap: 12px; position: absolute; top: 68px; left: 0; right: 0; background: var(--bg); padding: 12px 18px; border-bottom: 1px solid var(--border); z-index: 90; }
-      nav.nav-open .btn-cta-nav { display: block; margin: 8px 18px; }
+      nav.nav-open .btn-cta-nav { display: none;}
       .page-hero .btn { padding: 10px 18px; font-size: 13px; }
     }

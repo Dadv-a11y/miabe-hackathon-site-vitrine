@@ -157,7 +157,7 @@
     .store-btn .store-text small { font-size: 11px; font-weight: 600; opacity: .85; }
     .store-btn .store-text strong { font-size: 14px; }
     .store-btn.playstore { background: var(--white); color: var(--text-primary); border: 1px solid var(--border); }
-    .store-btn.appstore { background: var(--dark-green); color: var(--white); border: none; }
+    .store-btn.appstore { background: var(--white); color: var(--text-primary); border: 1px solid var(--border); }
 
     /* Desktop: enlarge store buttons */
     @media (min-width: 1024px) {
@@ -233,5 +233,5 @@
     @media (max-width: 640px) {
       .nav-toggle { display: flex; }
       nav.nav-open .nav-links { display: flex; flex-direction: column; gap: 12px; position: absolute; top: 68px; left: 0; right: 0; background: var(--bg); padding: 12px 18px; border-bottom: 1px solid var(--border); z-index: 90; }
-      nav.nav-open .btn-cta-nav { display: block; margin: 8px 18px; }
+      nav.nav-open .btn-cta-nav { display: none;  }
     }

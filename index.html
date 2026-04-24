@@ -3,14 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=home/home.html">
-  <title>Redirection…</title>
+  <title>CoopEnergie — Redirection</title>
+  <style>
+    :root{--bg:#F7FAF5;--dark-green:#00450D;--accent-green:#5be074;--white:#ffffff}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter, sans-serif;background:var(--bg);color:var(--dark-green);display:flex;align-items:center;justify-content:center}
+    .loader{width:100%;max-width:480px;padding:28px;text-align:center}
+    .logo{width:72px;height:72px;object-fit:contain;display:block;margin:0 auto 12px}
+    h1{font-size:20px;margin:0 0 6px;font-weight:800}
+    .tag{margin:0 0 18px;color:rgba(0,69,13,.85);font-weight:600}
+    .spinner{width:48px;height:48px;border-radius:50%;border:4px solid rgba(4,20,8,0.12);border-top-color:var(--dark-green);margin:12px auto;animation:spin .8s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .progress{height:8px;background:rgba(4,20,8,0.06);border-radius:8px;overflow:hidden;margin:12px auto;width:220px;max-width:100%}
+    .progress-fill{width:0%;height:100%;background:linear-gradient(90deg,var(--dark-green),var(--accent-green));transition:width 1.2s ease}
+    #status{margin-top:10px;font-weight:700;color:rgba(4,20,8,.85)}
+    .fallback{margin-top:12px;font-size:13px;color:rgba(4,20,8,.7)}
+    .fallback a{color:var(--dark-green);font-weight:700;text-decoration:none}
+  </style>
 </head>
 <body>
-  <p>Redirection vers la page d'accueil. Si la redirection ne fonctionne pas, <a href="home/home.html">cliquez ici</a>.</p>
+  <main class="loader" role="main" aria-live="polite">
+    <img src="image/logo.png" alt="CoopEnergie" class="logo">
+    <h1>CoopEnergie</h1>
+    <p class="tag">Chargement de la page d'accueil…</p>
+    <div class="spinner" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"><div class="progress-fill" id="progress"></div></div>
+    <div id="status">Chargement…</div>
+    <p class="fallback">Si la redirection ne fonctionne pas, <a href="home/home.html">cliquez ici</a>.</p>
+  </main>
+
   <script>
-    // fallback JS redirect
-    window.location.replace('home/home.html');
+    (function(){
+      var duration = 1200;
+      var start = Date.now();
+      var progressEl = document.getElementById('progress');
+      var status = document.getElementById('status');
+      function tick(){
+        var elapsed = Date.now() - start;
+        var pct = Math.min(100, Math.round((elapsed / duration) * 100));
+        progressEl.style.width = pct + '%';
+        status.textContent = 'Chargement… ' + pct + '%';
+        if(elapsed < duration){
+          requestAnimationFrame(tick);
+        } else {
+          status.textContent = 'Redirection…';
+          setTimeout(function(){ window.location.href = 'home/home.html'; }, 220);
+        }
+      }
+      requestAnimationFrame(tick);
+    })();
   </script>
 </body>
 </html>

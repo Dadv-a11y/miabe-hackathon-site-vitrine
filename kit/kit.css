@@ -139,6 +139,7 @@
     @media (max-width: 640px) {
       .nav-links { display: none; }
       .nav-inner { padding: 0 14px; height: 60px; }
+      .btn-cta-nav { display: none; }
       .wrap, .mkt-hero-grid { padding: 0 16px; }
       .products-grid { grid-template-columns: 1fr; }
       .product-img-wrap img { height: auto; }

@@ -145,6 +145,7 @@
     @media (max-width: 640px) {
       .nav-links { display: none; }
       .nav-inner { padding: 0 16px; height: 60px; }
+      .btn-cta-nav { display: none; }
       .wrap, .page-hero .wrap { padding: 0 18px; }
       .page-hero h1 { font-size: clamp(28px, 8vw, 36px); }
       .page-hero p { max-width: 100%; }
